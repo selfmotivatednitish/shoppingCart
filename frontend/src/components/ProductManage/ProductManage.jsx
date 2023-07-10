@@ -7,12 +7,12 @@ import AuthContext from '../Context/AuthProvider'
 export default function ProductManage() {
 
     const { user } = useContext(AuthContext)
-    const role = user?.role?.name
+    const roles = user?.roles
 
     return (
         <>
             {
-                role === "ADMIN" ? (
+                roles === "ROLE_ADMIN" ? (
                     <div>
                         <h1 className="text-center my-2 border border-success border-5 bg-secondary bg-gradient">
                             Product Management System
